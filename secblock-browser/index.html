@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>SEC - 首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/public.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <header id="topnav">
+        <div class="topbar-main">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a href="index.html" class="logo">
+                        <span class="logo-large">SEC Explorer</span>
+                    </a>
+                </div>
+                <div class="menu-extras topbar-custom">
+                    <ul class="list-inline float-right">
+                        <li class="menu-item list-inline-item">
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div> <!-- end container -->
+        </div>
+        <!-- end topbar-main -->
+
+        <div class="navbar-custom">
+            <div class="container-fluid">
+                <div id="navigation">
+                    <!-- Navigation Menu-->
+                    <ul class="navigation-menu">
+                        <li class="has-submenu active">
+                            <a href="index.html">首页</a>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="./pages/blockIndex.html">区块链</a>
+                            <ul class="submenu">
+                                <li><a href="./pages/blockDetails.html">区块</a></li>
+                                <li><a href="./pages/trading.html">交易</a></li>
+                                <li><a href="./pages/account.html">账户</a></li>
+                                <li><a href="./pages/blockNode.html">节点</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="./pages/contract.html">合约</a>
+                        </li>
+                        <li class="has-submenu" title="敬请期待">
+                            <a href="#">交易链</a>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="./pages/downLoadWallet.html">钱包下载</a>
+                        </li>
+                    </ul>
+                    <!-- End navigation menu -->
+                </div> <!-- end #navigation -->
+            </div> <!-- end container -->
+        </div> <!-- end navbar-custom -->
+    </header>
+
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row m-t-30">
+                <div class="col-lg-6">
+                    <div class="portlet">
+                        <div class="portlet-heading">
+                            <h4 class="portlet-title text-dark">
+                                实时TPS速度量
+                            </h4>
+                            <div class="portlet-widgets">
+                                <a href="javascript:;" data-toggle="reload">
+                                    <i class="ion-refresh"></i>
+                                </a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div id="portlet1" class="panel-collapse collapse show">
+                            <div class="portlet-body" style="height: 300px;">
+                                折线图自行选择，height 高度根据你们那边的需要来设置，刷新是静态的
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="portlet">
+                        <div class="portlet-heading">
+                            <h4 class="portlet-title text-dark">
+                                最近14天的交易量
+                            </h4>
+                            <div class="portlet-widgets">
+                                <a href="javascript:;" data-toggle="reload"><i class="ion-refresh"></i></a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div id="portlet1" class="panel-collapse collapse show">
+                            <div class="portlet-body" style="height: 300px;">
+                                折线图自行选择，height 高度根据你们那边的需要来设置，刷新是静态的
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row m-t-20 m-b-20">
+                <div class="col-lg-12">
+                    <ul class="indexList">
+                        <li class="indexListCnt">
+                            <span id="onlineNode"></span>
+                            <span>线上节点</span>
+                        </li>
+                        <li class="indexListCnt">
+                            <span id="currentHeight"></span>
+                            <span>当前区块高度</span>
+                        </li>
+                        <li class="indexListCnt">
+                            <span id="accountNumber"></span>
+                            <span>实时总账户数</span>
+                        </li>
+                        <li class="indexListCnt">
+                            <div>
+                                <span id="current"></span> /
+                                <span id="peak"></span>
+                            </div>
+                            <span>当前/峰值TPS</span>
+                        </li>
+                        <li class="indexListCnt">
+                            <span id="price"></span>
+                            <span>价格</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card-box">
+                        <div class="indexList">
+                            <h4 class="m-t-0 header-title">区块</h4>
+                            <a href="./pages/blockDetails.html">查看更多</a>
+                        </div>
+                        <div class="inbox-widget nicescroll mx-box" tabindex="5000">
+                            <ul class="inbox-item">
+                                <li class="itemList m-t-20 p-b-10">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
+                                        区块高度
+                                        <span>
+                                            区块奖励：1.11111SEC
+                                        </span>
+                                    </div>
+                                    <div class="inbox-item-text m-t-5" style="display: flex;justify-content: space-between;">
+                                        传输速度
+                                        <span>
+                                            交易时间差
+                                        </span>
+                                    </div>
+                                    <div class="inbox-item-text m-t-5">
+                                        生产者：0x1AVM7PKp8mGJA8LjkozCgZWU34aVw7kj5a
+                                    </div>
+                                </li>
+                                <li class="itemList m-t-20 p-b-10">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
+                                        区块高度
+                                        <span>
+                                            区块奖励：1.11111SEC
+                                        </span>
+                                    </div>
+                                    <div class="inbox-item-text m-t-5" style="display: flex;justify-content: space-between;">
+                                        传输速度
+                                        <span>
+                                            交易时间差
+                                        </span>
+                                    </div>
+                                    <div class="inbox-item-text m-t-5">
+                                        生产者：0x1AVM7PKp8mGJA8LjkozCgZWU34aVw7kj5a
+                                    </div>
+                                </li>
+                                <li class="itemList m-t-20 p-b-10">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
+                                        区块高度
+                                        <span>
+                                            区块奖励：1.11111SEC
+                                        </span>
+                                    </div>
+                                    <div class="inbox-item-text m-t-5" style="display: flex;justify-content: space-between;">
+                                        传输速度
+                                        <span>
+                                            交易时间差
+                                        </span>
+                                    </div>
+                                    <div class="inbox-item-text m-t-5">
+                                        生产者：0x1AVM7PKp8mGJA8LjkozCgZWU34aVw7kj5a
+                                    </div>
+                                </li>
+                                <li class="itemList m-t-20 p-b-10">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
+                                        区块高度
+                                        <span>
+                                            区块奖励：1.11111SEC
+                                        </span>
+                                    </div>
+                                    <div class="inbox-item-text m-t-5" style="display: flex;justify-content: space-between;">
+                                        传输速度
+                                        <span>
+                                            交易时间差
+                                        </span>
+                                    </div>
+                                    <div class="inbox-item-text m-t-5">
+                                        生产者：0x1AVM7PKp8mGJA8LjkozCgZWU34aVw7kj5a
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -8 -->
+                <div class="col-lg-6">
+                    <div class="card-box">
+                        <div class="indexList">
+                            <h4 class="m-t-0 header-title">交易</h4>
+                            <a href="./pages/trading.html">查看更多</a>
+                        </div>
+                        <div class="inbox-widget nicescroll mx-box" tabindex="5000">
+                            <ul class="inbox-item">
+                                <li class="itemList m-t-20 p-b-10">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
+                                        交易哈希
+                                        <div>
+                                            交易金额：7.725158115650162 SEC
+                                        </div>
+                                    </div>
+                                    <div class="inbox-item-text m-t-5">
+                                        发送人：0x7b43a57b10...0500024a6c2c
+                                    </div>
+                                    <div class="inbox-item-text m-t-5" style="display: flex;justify-content: space-between;">
+                                        接收人：0x7b43a57b10...0500024a6c2c
+                                        <div>
+                                            交易时间差
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="itemList m-t-20 p-b-10">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
+                                        交易哈希
+                                        <div>
+                                            交易金额：7.725158115650162 SEC
+                                        </div>
+                                    </div>
+                                    <div class="inbox-item-text m-t-5">
+                                        发送人：0x7b43a57b10...0500024a6c2c
+                                    </div>
+                                    <div class="inbox-item-text m-t-5" style="display: flex;justify-content: space-between;">
+                                        接收人：0x7b43a57b10...0500024a6c2c
+                                        <div>
+                                            交易时间差
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="itemList m-t-20 p-b-10">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
+                                        交易哈希
+                                        <div>
+                                            交易金额：7.725158115650162 SEC
+                                        </div>
+                                    </div>
+                                    <div class="inbox-item-text m-t-5">
+                                        发送人：0x7b43a57b10...0500024a6c2c
+                                    </div>
+                                    <div class="inbox-item-text m-t-5" style="display: flex;justify-content: space-between;">
+                                        接收人：0x7b43a57b10...0500024a6c2c
+                                        <div>
+                                            交易时间差
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="itemList m-t-20 p-b-10">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
+                                        交易哈希
+                                        <div>
+                                            交易金额：7.725158115650162 SEC
+                                        </div>
+                                    </div>
+                                    <div class="inbox-item-text m-t-5">
+                                        发送人：0x7b43a57b10...0500024a6c2c
+                                    </div>
+                                    <div class="inbox-item-text m-t-5" style="display: flex;justify-content: space-between;">
+                                        接收人：0x7b43a57b10...0500024a6c2c
+                                        <div>
+                                            交易时间差
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+        </div> <!-- end container -->
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    Copyright © 2018 SEC-Block
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.app.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

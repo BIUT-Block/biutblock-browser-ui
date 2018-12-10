@@ -1,0 +1,41 @@
+margin,ul {padding: 0;margin: 0;}
+ul li {list-style: none;}
+
+.inbox-widget .inbox-item {border: none;}
+.topbar-main {height: 62px;}
+.table thead tr th {white-space:nowrap;}
+
+.publicListCnt {border:1px solid #ccc;border-radius:4px;}
+.publicListTit {width: 140px;margin-right: 30px;margin-bottom: 0;vertical-align: top;}
+.publicListTxt {display: inline-block;width: calc(100% - 210px);word-wrap:break-word;}
+/* 首页 */
+.portlet-title {font-weight: normal!important;}
+.indexList {display: flex;justify-content: space-between;}
+.indexListCnt {display: flex;flex-direction: column;text-align: center;}
+.itemList {border-bottom: 1px solid #485561;}
+.header-title,h4 {margin-bottom: 0;}
+
+/* 区块链 -- 交易详情 */
+.accountMoney {display: inline-block;}
+.mdi-arrow-up {color: green;}
+.mdi-arrow-down {color: red;}
+.accountListTit {width: 60px;}
+.accountListTxt {width: calc(100% - 130px);}
+
+/* 区块链 -- 交易详情 */
+.tradingListTit {width: 100px;}
+.tradingListTxt {width: calc(100% - 170px);}
+
+/* 合约 */
+.contractTit {display:inline-block;width: 100px;margin-right: 30px;vertical-align: top;}
+.contractTxt {display: inline-block;width: 50%;word-wrap:break-word;} 
+
+/* 下载 */
+.downCntMl {margin-left: 16.5%;} 
+.downCnt {width: 300px;height: 300px;margin: 0 auto;}
+.downImg {height: 100px;border: 1px solid #ccc;}
+.downBtn {width: 260px;}
+
+@media (max-width: 767px) {
+  .downCntMl {margin-left: 0;} 
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>SEC - 区块链 - 区块详情</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+  <meta content="Coderthemes" name="author" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
+  <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="../css/public.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <!-- Navigation Bar-->
+  <header id="topnav">
+    <div class="topbar-main">
+      <div class="container-fluid">
+        <div class="logo">
+          <a href="../index.html" class="logo">
+            <span class="logo-large">SEC Explorer</span>
+          </a>
+        </div>
+        <div class="menu-extras topbar-custom">
+          <ul class="list-inline float-right">
+            <li class="menu-item list-inline-item">
+              <a class="navbar-toggle nav-link">
+                <div class="lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div> <!-- end container -->
+    </div>
+    <!-- end topbar-main -->
+    <div class="navbar-custom">
+      <div class="container-fluid">
+        <div id="navigation">
+          <!-- Navigation Menu-->
+          <ul class="navigation-menu">
+            <li class="has-submenu">
+              <a href="../index.html">首页</a>
+            </li>
+            <li class="has-submenu active">
+              <a href="blockIndex.html">区块链</a>
+              <ul class="submenu">
+                <li><a href="blockDetails.html">区块</a></li>
+                <li><a href="trading.html">交易</a></li>
+                <li><a href="account.html">账户</a></li>
+                <li><a href="blockNode.html">节点</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="contract.html">合约</a>
+            </li>
+            <li class="has-submenu" title="敬请期待">
+              <a href="#">交易链</a>
+            </li>
+            <li class="has-submenu">
+              <a href="downLoadWallet.html">钱包下载</a>
+            </li>
+          </ul>
+          <!-- End navigation menu -->
+        </div> <!-- end #navigation -->
+      </div> <!-- end container -->
+    </div> <!-- end navbar-custom -->
+  </header>
+  <!-- End Navigation Bar-->
+
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <ol class="breadcrumb m-0 p-0 m-t-30">
+            <li class="breadcrumb-item"><a href="blockIndex.html">区块链</a></li>
+            <li class="breadcrumb-item active">区块详情</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="m-t-30 publicListCnt">
+        <div class="p-t-10">
+          <label class="publicListTit text-right">状态：</label>
+          <span class="publicListTxt" id="state"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">哈希值：</label>
+          <span class="publicListTxt" id="hashValues"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">高度：</label>
+          <span class="publicListTxt" id="heightBlock"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">时间：</label>
+          <span class="publicListTxt" id="time"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">容量：</label>
+          <span class="publicListTxt" id="capacity"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">父区块哈希：</label>
+          <span class="publicListTxt" id="fatherHash"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">Difficulty：</label>
+          <span class="publicListTxt" id="difficulty"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">GasUsed：</label>
+          <span class="publicListTxt" id="gasUsed"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">GasLimit：</label>
+          <span class="publicListTxt" id="gasLimit"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">ExtraData：</label>
+          <span class="publicListTxt" id="extraData"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">TransactionsRoot：</label>
+          <span class="publicListTxt" id="transactionsRoot"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">ReceiptRoot：</label>
+          <span class="publicListTxt" id="receiptRoot"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">LogsBloom：</label>
+          <span class="publicListTxt" id="logsBloom"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">MixHash：</label>
+          <span class="publicListTxt" id="mixHash"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">StateRoot：</label>
+          <span class="publicListTxt" id="stateRoot"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">Nonce：</label>
+          <span class="publicListTxt" id="nonce"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit text-right">Block Reward：</label>
+          <span class="publicListTxt" id="reward"></span>
+        </div>
+        <div class="p-t-10 p-b-10">
+          <label class="publicListTit text-right">Beneficiary：</label>
+          <span class="publicListTxt" id="beneficiary"></span>
+        </div>
+      </div>
+      <div class="row m-t-30">
+        <div class="col-md-12 col-xs-12">
+          <div class="card-box">
+            <h4 class="m-t-20 header-title">总共 <span id="total"></span> 条交易</h4>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>交易哈希值 </th>
+                    <th>发送方</th>
+                    <th>接收方</th>
+                    <th>价值</th>
+                    <th>状态</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>0xf37805617d5d422fd5b...</th>
+                    <td>0x9732a55cd5074d3...</td>
+                    <td>0x9732a55cd5074d3...</td>
+                    <td>10.7 SEC</td>
+                    <td>Success</td>
+                  </tr>
+                  <tr>
+                    <th>0xf37805617d5d422fd5b...</th>
+                    <td>0x9732a55cd5074d3...</td>
+                    <td>0x9732a55cd5074d3...</td>
+                    <td>10.7 SEC</td>
+                    <td>Success</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="page">
+                分页
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end container -->
+  </div>
+  <!-- end wrapper -->
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          Copyright © 2018 SEC-Block
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.app.js"></script>
+  <script src="../js/blockDetails.js"></script>
+</body>
+
+</html>
