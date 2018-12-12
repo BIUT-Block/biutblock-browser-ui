@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>SEC - 区块链</title>
+  <title>SEC - 合约详情</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
   <meta content="Coderthemes" name="author" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="shortcut icon" href="assets/images/favicon.ico">
 
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
   <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
@@ -42,6 +42,7 @@
         </div>
         <div class="clearfix"></div>
         <div id="navigation">
+          <!-- Navigation Menu-->
           <ul class="navigation-menu">
             <li class="has-submenu">
               <img src="../images/logo.png" alt="" width="20px" height="20px">
@@ -51,7 +52,7 @@
             <li class="has-submenu">
               <a href="../index.html">首页</a>
             </li>
-            <li class="has-submenu active">
+            <li class="has-submenu">
               <a href="blockIndex.html">区块链</a>
               <ul class="submenu">
                 <li><a href="blockIndex.html">区块</a></li>
@@ -60,7 +61,7 @@
                 <li><a href="blockNode.html">节点</a></li>
               </ul>
             </li>
-            <li class="has-submenu">
+            <li class="has-submenu active">
               <a href="contract.html">合约</a>
             </li>
             <li class="has-submenu" title="敬请期待">
@@ -86,55 +87,120 @@
       <div class="row">
         <div class="col-md-12 col-xs-12">
           <ol class="breadcrumb m-0 p-0">
-            <li class="breadcrumb-item"><a href="blockIndex.html">区块链</a></li>
-            <li class="breadcrumb-item active">区块</li>
+            <li class="breadcrumb-item"><a href="contract.html">合约</a></li>
+            <li class="breadcrumb-item active">合约详情</li>
           </ol>
         </div>
       </div>
 
-      <div class="row m-t-30">
-        <div class="col-md-12 col-xs-12">
-          <div class="card-box">
-            <h4 class="header-title">目前共有 <span id="total"></span> 个区块</h4>
-            <div class="table-responsive">
-              <table class="table table-hover table-bordered">
-                <thead>
-                  <tr>
-                    <th>高度 </th>
-                    <th>块龄</th>
-                    <th>交易数量</th>
-                    <th>出块者</th>
-                    <th>字节</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a href="blockDetails.html">1111</a></td>
-                    <td>0x9732a55cd5074d3...</td>
-                    <td>0x9732a55cd5074d3...</td>
-                    <td>10.7 SEC</td>
-                    <td>Success</td>
-                  </tr>
-                  <tr>
-                    <td><a href="blockDetails.html">1111</a></td>
-                    <td>0x9732a55cd5074d3...</td>
-                    <td>0x9732a55cd5074d3...</td>
-                    <td>10.7 SEC</td>
-                    <td>Success</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="page">
-                分页
-              </div>
-            </div>
+      <div class="row m-t-20 card-box m-0">
+        <div class="col-md-6">
+          <div>
+            <span class="contractTit text-right">合约地址</span>
+            <span class="contractTxt" id="address"></span>
+          </div>
+          <div class="m-b-10 m-t-10">
+            <span class="contractTit text-right">余额</span>
+            <span class="contractTxt" id="balance"></span>
+          </div>
+          <div>
+            <span class="contractTit text-right">交易次数</span>
+            <span class="contractTxt" id="tradingNumber"></span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div>
+            <span class="contractTit text-right">创建者</span>
+            <span class="contractTxt" id="creator"></span>
+          </div>
+          <div class="m-b-10 m-t-10">
+            <span class="contractTit text-right">交易号</span>
+            <span class="contractTxt" id="tradingNo"></span>
+          </div>
+          <div>
+            <span class="contractTit text-right">交易时间</span>
+            <span class="contractTxt" id="tradingTime"></span>
           </div>
         </div>
       </div>
+      <div class="row m-t-30">
+        <div class="col-md-12 col-xs-12">
+          <div class="card-box">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a href="#home" data-toggle="tab" aria-expanded="false" class="nav-link active show">
+                  交易
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#profile" data-toggle="tab" aria-expanded="true" class="nav-link">
+                  事件
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#messages" data-toggle="tab" aria-expanded="false" class="nav-link">
+                  代码
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade  active show" id="home">
+                <h4 class="header-title m-t-0 m-b-30">当前共 <span id="total">2</span> 条交易信息</h4>
+                <table class="table table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>交易哈希</th>
+                      <th>区块</th>
+                      <th>交易时间</th>
+                      <th>发送人</th>
+                      <th>接收人</th>
+                      <th>价值</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>0xf37805617d5d422fd5b...</th>
+                      <td>4020470</td>
+                      <td>4 minutes ago</td>
+                      <td>0x9732a55cd5074d3...</td>
+                      <td>0x9732a55cd5074d3...</td>
+                      <td>10 SEC</td>
+                    </tr>
+                    <tr>
+                      <th>0xf37805617d5d422fd5b...</th>
+                      <td>4020470</td>
+                      <td>4 minutes ago</td>
+                      <td>0x9732a55cd5074d3...</td>
+                      <td>0x9732a55cd5074d3...</td>
+                      <td>10 SEC</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="page">
+                  分页
+                </div>
+              </div>
+              <div class="tab-pane fade" id="profile">
+                代码
+              </div>
+              <div class="tab-pane fade" id="messages">
+                事件
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="card-box">
+            <h4 class="m-t-20 header-title">当前共有 <span id="total"></span> 条交易信息</h4>
+            <div class="table-responsive">
+              
+            </div>
+          </div> -->
+        </div>
+      </div>
+
     </div> <!-- end container -->
   </div>
   <!-- end wrapper -->
-
 
   <!-- Footer -->
   <footer class="footer">
@@ -162,7 +228,7 @@
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
   <script src="../assets/js/jquery.app.js"></script>
-  <script src="../js/blockIndex.js"></script>
+  <script src="../js/contract.js"></script>
 </body>
 
 </html>

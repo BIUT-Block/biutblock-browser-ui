@@ -22,11 +22,11 @@
     <header id="topnav">
         <div class="topbar-main">
             <div class="container-fluid">
-                <div class="logo">
+                <!-- <div class="logo">
                     <a href="index.html" class="logo">
-                        <span class="logo-large">SEC Explorer</span>
+                        <span class="logo-large"></span>
                     </a>
-                </div>
+                </div> -->
                 <div class="menu-extras topbar-custom">
                     <ul class="list-inline float-right">
                         <li class="menu-item list-inline-item">
@@ -41,22 +41,21 @@
                     </ul>
                 </div>
                 <div class="clearfix"></div>
-            </div> <!-- end container -->
-        </div>
-        <!-- end topbar-main -->
-
-        <div class="navbar-custom">
-            <div class="container-fluid">
                 <div id="navigation">
                     <!-- Navigation Menu-->
                     <ul class="navigation-menu">
+                        <li class="has-submenu">
+                            <img src="./images/logo.png" alt="" width="20px" height="20px">
+                            <span style="font-size: 16px;margin-left: 8px;vertical-align: middle;font-weight: bold;">SEC
+                                Explorer</span>
+                        </li>
                         <li class="has-submenu active">
                             <a href="index.html">首页</a>
                         </li>
                         <li class="has-submenu">
                             <a href="./pages/blockIndex.html">区块链</a>
                             <ul class="submenu">
-                                <li><a href="./pages/blockDetails.html">区块</a></li>
+                                <li><a href="./pages/blockIndex.html">区块</a></li>
                                 <li><a href="./pages/trading.html">交易</a></li>
                                 <li><a href="./pages/account.html">账户</a></li>
                                 <li><a href="./pages/blockNode.html">节点</a></li>
@@ -71,18 +70,22 @@
                         <li class="has-submenu">
                             <a href="./pages/downLoadWallet.html">钱包下载</a>
                         </li>
+                        <li class="has-submenu">
+                            <input type="text" class="searchIpt" placeholder="请输入搜索内容">
+                            <button>搜索</button>
+                        </li>
                     </ul>
                     <!-- End navigation menu -->
                 </div> <!-- end #navigation -->
             </div> <!-- end container -->
-        </div> <!-- end navbar-custom -->
+        </div>
     </header>
 
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row m-t-30">
                 <div class="col-lg-6">
-                    <div class="portlet">
+                    <div class="portlet" style="border-radius: 5px;">
                         <div class="portlet-heading">
                             <h4 class="portlet-title text-dark">
                                 实时TPS速度量
@@ -102,7 +105,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="portlet">
+                    <div class="portlet" style="border-radius: 5px;">
                         <div class="portlet-heading">
                             <h4 class="portlet-title text-dark">
                                 最近14天的交易量
@@ -123,45 +126,78 @@
 
 
             <div class="row m-t-20 m-b-20">
-                <div class="col-lg-12">
-                    <ul class="indexList">
-                        <li class="indexListCnt">
-                            <span id="onlineNode"></span>
-                            <span>线上节点</span>
-                        </li>
-                        <li class="indexListCnt">
-                            <span id="currentHeight"></span>
-                            <span>当前区块高度</span>
-                        </li>
-                        <li class="indexListCnt">
-                            <span id="accountNumber"></span>
-                            <span>实时总账户数</span>
-                        </li>
-                        <li class="indexListCnt">
-                            <div>
-                                <span id="current"></span> /
-                                <span id="peak"></span>
-                            </div>
-                            <span>当前/峰值TPS</span>
-                        </li>
-                        <li class="indexListCnt">
-                            <span id="price"></span>
-                            <span>价格</span>
-                        </li>
-                    </ul>
+                <div class="col-lg-2">
+                    <div class=" widget-simple text-center card-box">
+                        <h3 class="text-success counter font-bold mt-0" id="onlineNode"></h3>
+                        <span class="text-muted mb-0">线上节点</span>
+                    </div>
                 </div>
+                <div class="col-lg-2">
+                    <div class=" widget-simple text-center card-box">
+                        <h3 class="text-primary counter font-bold mt-0" id="currentHeight"></h3>
+                        <span class="text-muted mb-0">当前区块高度</span>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class=" widget-simple text-center card-box">
+                        <h3 class="text-pink  counter font-bold mt-0" id="accountNumber"></h3>
+                        <span class="text-muted mb-0">实时总账户数</span>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class=" widget-simple text-center card-box">
+                        <div>
+                            <h3 class="text-purple counter font-bold mt-0" style="display: inline-block;" id="current"></h3>
+                            /
+                            <h3 class="text-warning counter font-bold mt-0" style="display: inline-block;" id="peak"></h3>
+                        </div>
+                        <span class="text-muted mb-0">当前/峰值TPS</span>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class=" widget-simple text-center card-box">
+                        <h3 class="text-success counter font-bold mt-0" id="price"></h3>
+                        <span class="text-muted mb-0">价格</span>
+                    </div>
+                </div>
+                <!-- <ul class="indexList">
+                        <li class=" widget-simple text-center card-box">
+                            <h3 class="text-success counter font-bold mt-0" id="onlineNode"></h3>
+                            <span class="text-muted mb-0">线上节点</span>
+                        </li>
+                        <li class="  widget-simple text-center card-box">
+                            <h3 class="text-primary counter font-bold mt-0" id="currentHeight"></h3>
+                            <span class="text-muted mb-0">当前区块高度</span>
+                        </li>
+                        <li class="  widget-simple text-center card-box">
+                            <h3 class="text-pink  counter font-bold mt-0" id="accountNumber"></span>
+                                <span class="text-muted mb-0">实时总账户数</span>
+                        </li>
+                        <li class="  widget-simple text-center card-box">
+                            <div>
+                                <h3 class="text-purple counter font-bold mt-0" style="display: inline-block;" id="current"></h3>
+                                /
+                                <h3 class="text-warning counter font-bold mt-0" style="display: inline-block;" id="peak"></h3>
+                            </div>
+                            <span class="text-muted mb-0">当前/峰值TPS</span>
+                        </li>
+                        <li class="  widget-simple text-center card-box">
+                            <h3 class="text-success counter font-bold mt-0" id="price"></h3>
+                            <span class="text-muted mb-0">价格</span>
+                        </li>
+                    </ul> -->
             </div>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="card-box">
                         <div class="indexList">
                             <h4 class="m-t-0 header-title">区块</h4>
-                            <a href="./pages/blockDetails.html">查看更多</a>
+                            <a href="./pages/blockDetails.html" style="font-size: 13px;color: #00d6b2;">查看更多</a>
                         </div>
                         <div class="inbox-widget nicescroll mx-box" tabindex="5000">
                             <ul class="inbox-item">
-                                <li class="itemList m-t-20 p-b-10">
-                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
+                                <li class="itemList" style="margin-top:13px;padding-bottom: 13px;">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;font-weight: bold;">
                                         区块高度
                                         <span>
                                             区块奖励：1.11111SEC
@@ -177,8 +213,8 @@
                                         生产者：0x1AVM7PKp8mGJA8LjkozCgZWU34aVw7kj5a
                                     </div>
                                 </li>
-                                <li class="itemList m-t-20 p-b-10">
-                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
+                                <li class="itemList" style="margin-top:13px;padding-bottom: 13px;">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;font-weight: bold;">
                                         区块高度
                                         <span>
                                             区块奖励：1.11111SEC
@@ -194,8 +230,8 @@
                                         生产者：0x1AVM7PKp8mGJA8LjkozCgZWU34aVw7kj5a
                                     </div>
                                 </li>
-                                <li class="itemList m-t-20 p-b-10">
-                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
+                                <li class="itemList" style="margin-top:13px;padding-bottom: 13px;">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;font-weight: bold;">
                                         区块高度
                                         <span>
                                             区块奖励：1.11111SEC
@@ -211,8 +247,8 @@
                                         生产者：0x1AVM7PKp8mGJA8LjkozCgZWU34aVw7kj5a
                                     </div>
                                 </li>
-                                <li class="itemList m-t-20 p-b-10">
-                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
+                                <li class="itemList" style="margin-top:13px;padding-bottom: 13px;">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;font-weight: bold;">
                                         区块高度
                                         <span>
                                             区块奖励：1.11111SEC
@@ -238,13 +274,13 @@
                     <div class="card-box">
                         <div class="indexList">
                             <h4 class="m-t-0 header-title">交易</h4>
-                            <a href="./pages/trading.html">查看更多</a>
+                            <a href="./pages/trading.html" style="font-size: 13px;color: #00d6b2;">查看更多</a>
                         </div>
                         <div class="inbox-widget nicescroll mx-box" tabindex="5000">
                             <ul class="inbox-item">
-                                <li class="itemList m-t-20 p-b-10">
-                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
-                                        交易哈希
+                                <li class="itemList" style="margin-top:13px;padding-bottom: 13px;">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;font-weight: bold;">
+                                        交易哈希1
                                         <div>
                                             交易金额：7.725158115650162 SEC
                                         </div>
@@ -260,9 +296,43 @@
                                     </div>
                                 </li>
 
-                                <li class="itemList m-t-20 p-b-10">
-                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
-                                        交易哈希
+                                <li class="itemList" style="margin-top:13px;padding-bottom: 13px;">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;font-weight: bold;">
+                                        交易哈希1
+                                        <div>
+                                            交易金额：7.725158115650162 SEC
+                                        </div>
+                                    </div>
+                                    <div class="inbox-item-text m-t-5">
+                                        发送人：0x7b43a57b10...0500024a6c2c
+                                    </div>
+                                    <div class="inbox-item-text m-t-5" style="display: flex;justify-content: space-between;">
+                                        接收人：0x7b43a57b10...0500024a6c2c
+                                        <div>
+                                            交易时间差
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="itemList" style="margin-top:13px;padding-bottom: 13px;">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;font-weight: bold;">
+                                        交易哈希1
+                                        <div>
+                                            交易金额：7.725158115650162 SEC
+                                        </div>
+                                    </div>
+                                    <div class="inbox-item-text m-t-5">
+                                        发送人：0x7b43a57b10...0500024a6c2c
+                                    </div>
+                                    <div class="inbox-item-text m-t-5" style="display: flex;justify-content: space-between;">
+                                        接收人：0x7b43a57b10...0500024a6c2c
+                                        <div>
+                                            交易时间差
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="itemList" style="margin-top:13px;padding-bottom: 13px;">
+                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;font-weight: bold;">
+                                        交易哈希1
                                         <div>
                                             交易金额：7.725158115650162 SEC
                                         </div>
@@ -278,40 +348,8 @@
                                     </div>
                                 </li>
 
-                                <li class="itemList m-t-20 p-b-10">
-                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
-                                        交易哈希
-                                        <div>
-                                            交易金额：7.725158115650162 SEC
-                                        </div>
-                                    </div>
-                                    <div class="inbox-item-text m-t-5">
-                                        发送人：0x7b43a57b10...0500024a6c2c
-                                    </div>
-                                    <div class="inbox-item-text m-t-5" style="display: flex;justify-content: space-between;">
-                                        接收人：0x7b43a57b10...0500024a6c2c
-                                        <div>
-                                            交易时间差
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="itemList m-t-20 p-b-10">
-                                    <div class="inbox-item-text" style="display: flex;justify-content: space-between;">
-                                        交易哈希
-                                        <div>
-                                            交易金额：7.725158115650162 SEC
-                                        </div>
-                                    </div>
-                                    <div class="inbox-item-text m-t-5">
-                                        发送人：0x7b43a57b10...0500024a6c2c
-                                    </div>
-                                    <div class="inbox-item-text m-t-5" style="display: flex;justify-content: space-between;">
-                                        接收人：0x7b43a57b10...0500024a6c2c
-                                        <div>
-                                            交易时间差
-                                        </div>
-                                    </div>
-                                </li>
+
+
                             </ul>
                         </div>
                     </div>
@@ -323,8 +361,21 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center">
-                    Copyright © 2018 SEC-Block
+                <div class="col-6 text-left">
+                    <h4>联系我们</h4>
+                    <p>以社交信任为基础的下一代电商区块链基础协议</p>
+                    <p> Copyright © 2018 SEC-Block</p>
+                </div>
+                <div class="col-6 text-left">
+                    <h4>联系我们</h4>
+                    <ul class="footerList">
+                        <li>
+                            <div class="footerFlex">
+                                <img src="" alt="" style="width: 30px;height: 30px;border: 1px solid #ccc;">
+                                官网
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

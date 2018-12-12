@@ -9,11 +9,12 @@
   <meta content="Coderthemes" name="author" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <link rel="shortcut icon" href="assets/images/favicon.ico">
-  <!-- App css -->
+
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
   <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
   <link href="../css/public.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -22,9 +23,9 @@
     <div class="topbar-main">
       <div class="container-fluid">
         <div class="logo">
-          <a href="../index.html" class="logo">
+          <!-- <a href="../index.html" class="logo">
             <span class="logo-large">SEC Explorer</span>
-          </a>
+          </a> -->
         </div>
         <div class="menu-extras topbar-custom">
           <ul class="list-inline float-right">
@@ -40,21 +41,20 @@
           </ul>
         </div>
         <div class="clearfix"></div>
-      </div> <!-- end container -->
-    </div>
-    <!-- end topbar-main -->
-    <div class="navbar-custom">
-      <div class="container-fluid">
         <div id="navigation">
-          <!-- Navigation Menu-->
           <ul class="navigation-menu">
+              <li class="has-submenu">
+                  <img src="../images/logo.png" alt="" width="20px" height="20px">
+                  <span style="font-size: 16px;margin-left: 8px;vertical-align: middle;font-weight: bold;">SEC
+                    Explorer</span>
+                </li>
             <li class="has-submenu">
               <a href="../index.html">首页</a>
             </li>
             <li class="has-submenu active">
               <a href="blockIndex.html">区块链</a>
               <ul class="submenu">
-                <li><a href="blockDetails.html">区块</a></li>
+                <li><a href="blockIndex.html">区块</a></li>
                 <li><a href="trading.html">交易</a></li>
                 <li><a href="account.html">账户</a></li>
                 <li><a href="blockNode.html">节点</a></li>
@@ -63,107 +63,109 @@
             <li class="has-submenu">
               <a href="contract.html">合约</a>
             </li>
-
             <li class="has-submenu" title="敬请期待">
               <a href="#">交易链</a>
             </li>
-
             <li class="has-submenu">
               <a href="downLoadWallet.html">钱包下载</a>
+            </li>
+            <li class="has-submenu">
+                <input type="text" class="searchIpt" placeholder="请输入搜索内容">
+                <button>搜索</button>
             </li>
           </ul>
           <!-- End navigation menu -->
         </div> <!-- end #navigation -->
       </div> <!-- end container -->
-    </div> <!-- end navbar-custom -->
+    </div>
+    <!-- end topbar-main -->
   </header>
   <!-- End Navigation Bar-->
-
   <div class="wrapper">
     <div class="container-fluid">
-
       <div class="row">
         <div class="col-md-12 col-xs-12">
-          <ol class="breadcrumb m-0 p-0 m-t-30">
+          <ol class="breadcrumb m-0 p-0">
             <li class="breadcrumb-item"><a href="blockIndex.html">区块链</a></li>
-            <li class="breadcrumb-item active">交易详情</li>
+            <li class="breadcrumb-item active">交易</li>
           </ol>
         </div>
       </div>
 
-      <div class="m-t-30 m-b-30 publicListCnt">
-        <div class="p-t-10">
-          <label class="publicListTit tradingListTit text-right">哈希值：</label>
-          <span class="publicListTxt tradingListTxt" id="hashValues"></span>
-        </div>
-        <div class="p-t-10">
-          <label class="publicListTit tradingListTit text-right">状态：</label>
-          <span class="publicListTxt tradingListTxt" id="state"></span>
-        </div>
-        <div class="p-t-10">
-          <label class="publicListTit tradingListTit text-right">高度：</label>
-          <span class="publicListTxt tradingListTxt" id="heightBlock"></span>
-        </div>
-
-        <div class="p-t-10">
-          <label class="publicListTit tradingListTit text-right">时间：</label>
-          <span class="publicListTxt tradingListTxt" id="time"></span>
-        </div>
-        <div class="p-t-10">
-          <label class="publicListTit tradingListTit text-right">发送方：</label>
-          <span class="publicListTxt tradingListTxt" id="sender"></span>
-        </div>
-        <div class="p-t-10">
-          <label class="publicListTit tradingListTit text-right">接收方：</label>
-          <span class="publicListTxt tradingListTxt" id="receiving"></span>
-        </div>
-        <div class="p-t-10">
-          <label class="publicListTit tradingListTit text-right">价值：</label>
-          <span class="publicListTxt tradingListTxt" id="valueOf"></span>
-        </div>
-        <div class="p-t-10">
-          <label class="publicListTit tradingListTit text-right">GasUsed：</label>
-          <span class="publicListTxt tradingListTxt" id="gasUsed"></span>
-        </div>
-        <div class="p-t-10">
-          <label class="publicListTit tradingListTit text-right">GasLimit：</label>
-          <span class="publicListTxt tradingListTxt" id="gasLimit"></span>
-        </div>
-        <div class="p-t-10">
-          <label class="publicListTit tradingListTit text-right">Gas Price：</label>
-          <span class="publicListTxt tradingListTxt" id="price"></span>
-        </div>
-
-        <div class="p-t-10">
-          <label class="publicListTit tradingListTit text-right">Version：</label>
-          <span class="publicListTxt tradingListTxt" id="version"></span>
-        </div>
-        <div class="p-t-10">
-          <label class="publicListTit tradingListTit text-right">TxFee：</label>
-          <span class="publicListTxt tradingListTxt" id="txFee"></span>
-        </div>
-        <div class="p-t-10 p-b-10">
-          <label class="publicListTit tradingListTit text-right">InputData：</label>
-          <span class="publicListTxt tradingListTxt" id="inputData"></span>
+      <div class="row m-t-30">
+        <div class="col-md-12 col-xs-12">
+          <div class="card-box">
+            <h4 class="header-title">目前共有 <span id="total"></span> 笔交易</h4>
+            <div class="table-responsive">
+              <table class="table table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th>交易哈希</th>
+                    <th>区块</th>
+                    <th>块龄</th>
+                    <th>发送方</th>
+                    <th>接收方</th>
+                    <th>价值</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="tradingDetails.html">aab4bc6c4fcd3a4b97e9a...</a></td>
+                    <td><a href="blockDetails.html">6701280</a></td>
+                    <td>4 minutes ago</td>
+                    <td><a href="accountDetails.html">0xeebd6206f56c6f795ee...</a></td>
+                    <td><a href="accountDetails.html">0xeebd6206f56c6f795ee...</a></td>
+                    <td>0.1 SEC</td>
+                  </tr>
+                  <tr>
+                    <td><a href="tradingDetails.html">aab4bc6c4fcd3a4b97e9a...</a></td>
+                    <td><a href="blockDetails.html">6701280</a></td>
+                    <td>4 minutes ago</td>
+                    <td><a href="accountDetails.html">0xeebd6206f56c6f795ee...</a></td>
+                    <td><a href="accountDetails.html">0xeebd6206f56c6f795ee...</a></td>
+                    <td>0.1 SEC</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="page">
+                分页
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div> <!-- end container -->
   </div>
   <!-- end wrapper -->
+
+
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          Copyright © 2018 SEC-Block
+      <div class="container">
+        <div class="row">
+          <div class="col-6 text-left">
+              <h4>联系我们</h4>
+              <p>以社交信任为基础的下一代电商区块链基础协议</p>
+              <p> Copyright © 2018 SEC-Block</p>
+          </div>
+          <div class="col-6 text-left">
+            <h4>联系我们</h4>
+            <ul class="footerList">
+              <li>
+                <div class="footerFlex">
+                  <img src="" alt="" style="width: 30px;height: 30px;border: 1px solid #ccc;">
+                  官网
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
   <script src="../assets/js/jquery.app.js"></script>
-  <script src="../js/trading.js"></script>
+  <script src="../js/blockIndex.js"></script>
 </body>
 
 </html>

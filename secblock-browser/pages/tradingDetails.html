@@ -3,18 +3,17 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>SEC - 区块链</title>
+  <title>SEC - 区块链 - 交易</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
   <meta content="Coderthemes" name="author" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <link rel="shortcut icon" href="assets/images/favicon.ico">
-
+  <!-- App css -->
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
   <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
   <link href="../css/public.css" rel="stylesheet" type="text/css" />
-
 </head>
 
 <body>
@@ -42,6 +41,7 @@
         </div>
         <div class="clearfix"></div>
         <div id="navigation">
+          <!-- Navigation Menu-->
           <ul class="navigation-menu">
             <li class="has-submenu">
               <img src="../images/logo.png" alt="" width="20px" height="20px">
@@ -63,9 +63,11 @@
             <li class="has-submenu">
               <a href="contract.html">合约</a>
             </li>
+
             <li class="has-submenu" title="敬请期待">
               <a href="#">交易链</a>
             </li>
+
             <li class="has-submenu">
               <a href="downLoadWallet.html">钱包下载</a>
             </li>
@@ -81,61 +83,78 @@
     <!-- end topbar-main -->
   </header>
   <!-- End Navigation Bar-->
+
   <div class="wrapper">
     <div class="container-fluid">
+
       <div class="row">
         <div class="col-md-12 col-xs-12">
           <ol class="breadcrumb m-0 p-0">
             <li class="breadcrumb-item"><a href="blockIndex.html">区块链</a></li>
-            <li class="breadcrumb-item active">区块</li>
+            <li class="breadcrumb-item active">交易详情</li>
           </ol>
         </div>
       </div>
 
-      <div class="row m-t-30">
-        <div class="col-md-12 col-xs-12">
-          <div class="card-box">
-            <h4 class="header-title">目前共有 <span id="total"></span> 个区块</h4>
-            <div class="table-responsive">
-              <table class="table table-hover table-bordered">
-                <thead>
-                  <tr>
-                    <th>高度 </th>
-                    <th>块龄</th>
-                    <th>交易数量</th>
-                    <th>出块者</th>
-                    <th>字节</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a href="blockDetails.html">1111</a></td>
-                    <td>0x9732a55cd5074d3...</td>
-                    <td>0x9732a55cd5074d3...</td>
-                    <td>10.7 SEC</td>
-                    <td>Success</td>
-                  </tr>
-                  <tr>
-                    <td><a href="blockDetails.html">1111</a></td>
-                    <td>0x9732a55cd5074d3...</td>
-                    <td>0x9732a55cd5074d3...</td>
-                    <td>10.7 SEC</td>
-                    <td>Success</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="page">
-                分页
-              </div>
-            </div>
-          </div>
+      <div class="m-t-30 m-b-30 card-box">
+        <div class="p-t-10">
+          <label class="publicListTit tradingListTit text-right">哈希值：</label>
+          <span class="publicListTxt tradingListTxt" id="hashValues"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit tradingListTit text-right">状态：</label>
+          <span class="publicListTxt tradingListTxt" id="state"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit tradingListTit text-right">高度：</label>
+          <span class="publicListTxt tradingListTxt" id="heightBlock"></span>
+        </div>
+
+        <div class="p-t-10">
+          <label class="publicListTit tradingListTit text-right">时间：</label>
+          <span class="publicListTxt tradingListTxt" id="time"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit tradingListTit text-right">发送方：</label>
+          <span class="publicListTxt tradingListTxt" id="sender"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit tradingListTit text-right">接收方：</label>
+          <span class="publicListTxt tradingListTxt" id="receiving"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit tradingListTit text-right">价值：</label>
+          <span class="publicListTxt tradingListTxt" id="valueOf"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit tradingListTit text-right">GasUsed：</label>
+          <span class="publicListTxt tradingListTxt" id="gasUsed"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit tradingListTit text-right">GasLimit：</label>
+          <span class="publicListTxt tradingListTxt" id="gasLimit"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit tradingListTit text-right">Gas Price：</label>
+          <span class="publicListTxt tradingListTxt" id="price"></span>
+        </div>
+
+        <div class="p-t-10">
+          <label class="publicListTit tradingListTit text-right">Version：</label>
+          <span class="publicListTxt tradingListTxt" id="version"></span>
+        </div>
+        <div class="p-t-10">
+          <label class="publicListTit tradingListTit text-right">TxFee：</label>
+          <span class="publicListTxt tradingListTxt" id="txFee"></span>
+        </div>
+        <div class="p-t-10 p-b-10">
+          <label class="publicListTit tradingListTit text-right">InputData：</label>
+          <span class="publicListTxt tradingListTxt" id="inputData"></span>
         </div>
       </div>
     </div> <!-- end container -->
   </div>
   <!-- end wrapper -->
-
-
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -162,7 +181,7 @@
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
   <script src="../assets/js/jquery.app.js"></script>
-  <script src="../js/blockIndex.js"></script>
+  <script src="../js/trading.js"></script>
 </body>
 
 </html>

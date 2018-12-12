@@ -23,9 +23,9 @@
     <div class="topbar-main">
       <div class="container-fluid">
         <div class="logo">
-          <a href="../index.html" class="logo">
+          <!-- <a href="../index.html" class="logo">
             <span class="logo-large">SEC Explorer</span>
-          </a>
+          </a> -->
         </div>
         <div class="menu-extras topbar-custom">
           <ul class="list-inline float-right">
@@ -41,21 +41,21 @@
           </ul>
         </div>
         <div class="clearfix"></div>
-      </div> <!-- end container -->
-    </div>
-    <!-- end topbar-main -->
-    <div class="navbar-custom">
-      <div class="container-fluid">
         <div id="navigation">
           <!-- Navigation Menu-->
           <ul class="navigation-menu">
+            <li class="has-submenu">
+              <img src="../images/logo.png" alt="" width="20px" height="20px">
+              <span style="font-size: 16px;margin-left: 8px;vertical-align: middle;font-weight: bold;">SEC
+                Explorer</span>
+            </li>
             <li class="has-submenu">
               <a href="../index.html">首页</a>
             </li>
             <li class="has-submenu active">
               <a href="blockIndex.html">区块链</a>
               <ul class="submenu">
-                <li><a href="blockDetails.html">区块</a></li>
+                <li><a href="blockIndex.html">区块</a></li>
                 <li><a href="trading.html">交易</a></li>
                 <li><a href="account.html">账户</a></li>
                 <li><a href="blockNode.html">节点</a></li>
@@ -70,11 +70,15 @@
             <li class="has-submenu">
               <a href="downLoadWallet.html">钱包下载</a>
             </li>
+            <li class="has-submenu">
+              <input type="text" class="searchIpt" placeholder="请输入搜索内容">
+              <button>搜索</button>
+            </li>
           </ul>
           <!-- End navigation menu -->
         </div> <!-- end #navigation -->
       </div> <!-- end container -->
-    </div> <!-- end navbar-custom -->
+    </div>
   </header>
   <!-- End Navigation Bar-->
 
@@ -82,14 +86,14 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12 col-xs-12">
-          <ol class="breadcrumb m-0 p-0 m-t-30">
+          <ol class="breadcrumb m-0 p-0">
             <li class="breadcrumb-item"><a href="blockIndex.html">区块链</a></li>
             <li class="breadcrumb-item active">区块详情</li>
           </ol>
         </div>
       </div>
 
-      <div class="m-t-30 publicListCnt">
+      <div class="m-t-30 card-box">
         <div class="p-t-10">
           <label class="publicListTit text-right">状态：</label>
           <span class="publicListTxt" id="state"></span>
@@ -166,9 +170,9 @@
       <div class="row m-t-30">
         <div class="col-md-12 col-xs-12">
           <div class="card-box">
-            <h4 class="m-t-20 header-title">总共 <span id="total"></span> 条交易</h4>
+            <h4 class="header-title">总共 <span id="total"></span> 条交易</h4>
             <div class="table-responsive">
-              <table class="table table-hover">
+              <table class="table table-hover table-bordered">
                 <thead>
                   <tr>
                     <th>交易哈希值 </th>
@@ -180,16 +184,16 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th>0xf37805617d5d422fd5b...</th>
-                    <td>0x9732a55cd5074d3...</td>
-                    <td>0x9732a55cd5074d3...</td>
+                    <td><a href="trading.html">0xf37805617d5d422fd5b...</a></td>
+                    <td><a href="account.html">0xf37805617d5d422fd5b...</a></td>
+                    <td><a href="account.html">0xf37805617d5d422fd5b...</a></td>
                     <td>10.7 SEC</td>
                     <td>Success</td>
                   </tr>
                   <tr>
-                    <th>0xf37805617d5d422fd5b...</th>
-                    <td>0x9732a55cd5074d3...</td>
-                    <td>0x9732a55cd5074d3...</td>
+                    <td><a href="trading.html">0xf37805617d5d422fd5b...</a></td>
+                    <td><a href="account.html">0xf37805617d5d422fd5b...</a></td>
+                    <td><a href="account.html">0xf37805617d5d422fd5b...</a></td>
                     <td>10.7 SEC</td>
                     <td>Success</td>
                   </tr>
@@ -211,8 +215,21 @@
   <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-12 text-center">
-          Copyright © 2018 SEC-Block
+        <div class="col-6 text-left">
+          <h4>联系我们</h4>
+          <p>以社交信任为基础的下一代电商区块链基础协议</p>
+          <p> Copyright © 2018 SEC-Block</p>
+        </div>
+        <div class="col-6 text-left">
+          <h4>联系我们</h4>
+          <ul class="footerList">
+            <li>
+              <div class="footerFlex">
+                <img src="" alt="" style="width: 30px;height: 30px;border: 1px solid #ccc;">
+                官网
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
