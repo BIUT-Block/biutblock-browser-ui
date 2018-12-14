@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>SEC - 合约</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/public.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <!-- Navigation Bar-->
+    <header id="topnav">
+        <div class="topbar-main">
+            <div class="container-fluid">
+                <!-- Logo container-->
+                <div class="logo">
+                    <!-- Text Logo -->
+                    <a href="index.html" class="logo">
+                        <span class="logo-small">
+                            <img src="../images/headerLogo.png" alt="" width="40px" height="40px">
+                        </span>
+                    </a>
+
+                </div>
+                <!-- End Logo container-->
+                <div class="menu-extras topbar-custom">
+                    <ul class="list-inline float-right mb-0">
+                        <li class="menu-item list-inline-item">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </li>
+                    </ul>
+                </div>
+                <!-- end menu-extras -->
+
+                <div class="clearfix"></div>
+
+            </div> <!-- end container -->
+        </div>
+        <!-- end topbar-main -->
+
+        <div class="navbar-custom">
+            <div class="container-fluid">
+                <div id="navigation">
+                    <!-- Navigation Menu-->
+                    <ul class="navigation-menu clearfix">
+                        <li class="has-submenu">
+                            <img src="../images/logo.png" alt="" class="headerLogo" width="20px" height="20px">
+                            <span class="headerTit">SEC Explorer</span>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="../index.html">Home</a>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="blockIndex.html">Block Chain</a>
+                            <ul class="submenu">
+                                <li><a href="blockIndex.html">区块</a></li>
+                                <li><a href="trading.html">交易</a></li>
+                                <li><a href="account.html">账户</a></li>
+                                <li><a href="blockNode.html">节点</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu active">
+                            <a href="contract.html">Contract</a>
+                        </li>
+                        <li class="has-submenu" title="敬请期待">
+                            <a href="#">Trading Chain</a>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="downLoadWallet.html">Download Wallet</a>
+                        </li>
+                        <li class="has-submenu">
+                            <div class="hide-phone app-search">
+                                <form role="search" class="">
+                                    <input type="text" placeholder="Search..." class="form-control">
+                                    <a href=""><i class="fa fa-search"></i></a>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- End navigation menu -->
+                </div> <!-- end #navigation -->
+            </div> <!-- end container -->
+        </div> <!-- end navbar-custom -->
+    </header>
+    <!-- End Navigation Bar-->
+
+
+    <div class="wrapper">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <ol class="breadcrumb m-0 p-0">
+                        <li class="breadcrumb-item"><a href="blockIndex.html">合约</a></li>
+                        <li class="breadcrumb-item active">合约</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="row m-t-20">
+                <div class="col-md-12 col-xs-12">
+                    <div class="card-box">
+                        <h4 class="header-title">当前合约数量（条）：<span id="total"></span></h4>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>地址</th>
+                                        <th>合约名称</th>
+                                        <th>余额</th>
+                                        <th>交易数量</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="contractDetails.html">secgood</a></td>
+                                        <td>secgood</td>
+                                        <td>0 SEC</td>
+                                        <td>2,786</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="contractDetails.html">secgood</a></td>
+                                        <td>secgood</td>
+                                        <td>0 SEC</td>
+                                        <td>2,786</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="page">
+                                分页
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- end container -->
+    </div>
+    <!-- end wrapper -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 text-left">
+                    <img src="../images/footerLogo.png" alt="SEC" class="footerImg" />
+                    <p class="ft14">以社交信任为基础的下一代电商区块链基础协议</p>
+                </div>
+                <div class="col-lg-6 text-left">
+                    <h4 class="footerTit footerTitT">找到我们</h4>
+                    <ul class="footerList">
+                        <li>
+                            <a href="http://secblock.io/" id="secLogo">
+                                <div class="footerFlex">
+                                    <img src="../images/sec.png" id="secLogoImg" alt="" class="icon_min" width="24px"
+                                        height="24px">
+                                    官网
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://weibo.com/SECblock " id="footerWeibo">
+                                <div class="footerFlex">
+                                    <img src="../images/weibo.png" id="footerWeiboImg" alt="" class="icon_min" width="24px"
+                                        height="24px">
+                                    微博
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/SECblock ">
+                                <div class="footerFlex">
+                                    <span class="ion-social-facebook icon_min"></span>
+                                    FaceBook
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/SECblock">
+                                <div class="footerFlex">
+                                    <span class="ion-social-twitter icon_min"></span>
+                                    Twitter
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.reddit.com/user/SECblock  ">
+                                <div class="footerFlex">
+                                    <span class="ion-social-reddit icon_min"></span>
+                                    Reddit
+                                </div>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="t.me/SECBlockChinese">
+                                <div class="footerFlex">
+                                    <span class="mdi mdi-telegram icon_min"></span>
+                                    Telegram
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="footerTxt">Copyright © 2018 SEC-Block</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.app.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/contract.js"></script>
+</body>
+
+</html>

@@ -1,48 +1,96 @@
-margin,ul {padding: 0;margin: 0;}
+body,margin,ul {padding: 0;margin: 0;}
 ul li {list-style: none;}
 
-.inbox-widget .inbox-item {border: none;}
-.topbar-main {height: 82px;background-color: #38434d!important;}
-.active {color: #00d6b2;}
+.ft14 {font-size: 14px;}
+/* 公共头部 */
+.headerLogo {margin-bottom:5px;}
+.headerTit {font-size: 16px;margin-left: 8px;font-weight: bold;color: #00d6b2;}
 
+/* 公共底部 */
+.footer {padding: 35px 0 10px;}
+.footerList {display: flex;justify-content: space-between;margin-left: 0;max-width: 400px;align-items: center;}
+.footerList li {float: left;font-size: .6rem;}
+.footerList li a {color: #98a6ad;}
+.footerList li a:hover {color: #00d6b2;}
+.footerTit {padding-bottom: 18px;font-size: 18px;}
+.footerFlex {display: flex;flex-direction: column;align-items: center;}
+.footerImg {padding-bottom: 35px;}
+.footerTxt {font-size: 12px;padding-top: 30px;}
+.icon_min {width: 1.5rem;height: 1.5rem;text-align: center;line-height: 1.5rem;font-size: 32px;margin-bottom: .5rem;}
 
-.navigation-menu {background: #38434d;height: 82px;}
-
-.table thead tr th {white-space:nowrap;}
-
+/* 区块 */
 .publicListTit {width: 140px;margin-right: 30px;margin-bottom: 0;vertical-align: top;}
-.publicListTxt {display: inline-block;width: calc(100% - 210px);word-wrap:break-word;}
+.publicListTxt {display: inline-block;width: calc(100% - 175px);word-wrap:break-word;}
+
 /* 首页 */
 .portlet-title {font-weight: normal!important;}
 .indexList {display: flex;justify-content: space-between;}
-.itemList {border-bottom: 1px solid #485561;}
-.searchIpt {height: 32px;}
+.indexList a {font-size: 13px;color: #98a6ad;}
+.indexList a:hover {font-size: 13px;color: #00d6b2;}
+.inbox-item .itemList:hover {background: #38434d;}
 
-/* 区块链 -- 交易详情 */
-.accountMoney {display: inline-block;}
-.mdi-arrow-up {color: green;}
-.mdi-arrow-down {color: red;}
-.accountListTit {width: 60px;}
-.accountListTxt {width: calc(100% - 130px);}
-
-/* 区块链 -- 交易详情 */
-.tradingListTit {width: 100px;}
-.tradingListTxt {width: calc(100% - 170px);}
 
 /* 合约 */
-.contractTit {display:inline-block;width: 100px;vertical-align: top;}
-.contractTxt {display: inline-block;width: 50%;word-wrap:break-word;} 
+.contractTit {display:inline-block;width: 80px;vertical-align: top;}
+.contractTxt {display: inline-block;width: calc(100% - 110px);word-wrap:break-word;}
+.contractList {height: 40px;}
+.contractList2 {height: 40px;line-height: 40px;}
+
+/* 区块链 -- 交易详情 */
+.tradingListTit {width: 80px;}
+.tradingListTxt {width: calc(100% - 120px);}
+
+/* 区块链 -- 账户详情 */
+.accountMoney {display: inline-block;}
+.accountList {height: 40px;line-height: 40px;}
+.mdi-arrow-up {color: #00b19d;}
+.mdi-arrow-down {color: #ef5350;}
+.accountListTit {width: 60px;margin-right: 0;}
+.accountListTxt {width: calc(100% - 70px);}
+.copyBtn {padding: 2px 13px;font-size: 13px;background: #00d6b2;color: #fff;outline: none!important;margin-left: 16px;}
+.copyBtn:hover {color: #fff;background: #51e5c8;}
+
+.accountInto {display:inline-block;border: none;font-size:12px;border-radius: 30px;text-align: center;line-height: 24px;
+  background: #00b19d;color: #fff;width: 48px;height: 24px;margin-left: 20px;}
+.accountOut {display:inline-block;border: none;font-size:12px;border-radius: 30px;text-align: center;line-height: 24px;
+  background: #ef5350;color: #fff;width: 48px;height: 24px;margin-left: 20px;}
+
 
 /* 下载 */
-.downCntMl {margin-left: 16.5%;} 
-.downCnt {width: 300px;height: 300px;margin: 0 auto;}
-.downImg {height: 100px;border: 1px solid #ccc;}
-.downBtn {width: 260px;}
+.downLeft {margin-left: 16.5%}
+.downCnt {width: 298px;height: 376px;margin: 0 auto;}
+.downImg {padding-top: 35px;width: 96px;height: 134px;}
+.downTit {font-size: 14px;font-weight: bold;margin-top: 62px;}
+.downTxt {font-size: 12px;margin: 10px 0 46px;width: 100%;}
+.downBtn {width: 215px;border: 1px solid #00d6b2;background: #00d6b2;color: #fff;font-size: 14px;}
+.downBtn:hover {color: #fff;}
+
+
+/* 重写样式 */
+.form-control{border: 1px solid #434f5c!important;background-color:#434f5c!important;color:#fff!important;}
+#topnav .navigation-menu > li > a {padding-top: 30px;padding-bottom: 30px;}
+#topnav .app-search a {color:#98a6ad!important;}
+.footer ul li {padding: 0!important;}
+
+#navigation .has-submenu:last-child {float: right;padding-top: 10px;}
+#navigation .has-submenu:first-child {margin-right: 15%;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{zoom:1}
+
+.wrapper {margin-bottom: 240px;padding-top: 100px!important;}
 
 @media (max-width: 767px) {
-  .downCntMl {margin-left: 0;} 
+  .footerTitT {padding-top: 30px;} 
+  .downCnt {margin-bottom: 20px;}
+  .copyBtn {display: none;}
+  .downLeft {margin-left: 0;}
+  .wrapper {padding-top: 82px!important;margin-bottom: 350px;}
+  #topnav .navigation-menu > li > a {padding-top: 15px;padding-bottom: 0px;}
+  #topnav .navigation-menu > li:last-child {padding-bottom: 15px;}
+  #topnav .navigation-menu > li:first-child {display: none;}
 }
 
-
-.footerList li {float: left;padding-left: 0;}
-.footerFlex {display: flex;flex-direction: column;}
+input::-webkit-input-placeholder{ color:#98a6ad!important;}
+input::-moz-placeholder{color:#98a6ad!important;}
+input:-moz-placeholder{color:#98a6ad!important;}
+input:-ms-input-placeholder{ color:#98a6ad!important;}

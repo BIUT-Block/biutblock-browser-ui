@@ -25,7 +25,6 @@
             }
         });
     }
-   
     // === following js will activate the menu in left side bar based on url ====
     function initMenuItem() {
         $(".navigation-menu a").each(function () {
@@ -40,9 +39,7 @@
     function init() {
         initNavbar();
         initMenuItem();
-        // Waves effect init
     }
-
     init();
 
 })(jQuery);
