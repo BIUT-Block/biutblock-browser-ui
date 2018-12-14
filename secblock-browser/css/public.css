@@ -1,6 +1,10 @@
 body,margin,ul {padding: 0;margin: 0;}
 ul li {list-style: none;}
+a {color: #00d6b2;}
+a:hover {color: #00d6b2;}
 
+.listHeaderActive {color: #00d6b2!important;}
+.listHeader {color:rgba(255, 255, 255, 0.7)!important;}
 .ft14 {font-size: 14px;}
 /* 公共头部 */
 .headerLogo {margin-bottom:5px;}
@@ -11,7 +15,7 @@ ul li {list-style: none;}
 .footerList {display: flex;justify-content: space-between;margin-left: 0;max-width: 400px;align-items: center;}
 .footerList li {float: left;font-size: .6rem;}
 .footerList li a {color: #98a6ad;}
-.footerList li a:hover {color: #00d6b2;}
+.footerList li a:hover {color: #00d6b2!important;}
 .footerTit {padding-bottom: 18px;font-size: 18px;}
 .footerFlex {display: flex;flex-direction: column;align-items: center;}
 .footerImg {padding-bottom: 35px;}
@@ -65,10 +69,16 @@ ul li {list-style: none;}
 .downBtn {width: 215px;border: 1px solid #00d6b2;background: #00d6b2;color: #fff;font-size: 14px;}
 .downBtn:hover {color: #fff;}
 
-
 /* 重写样式 */
 .form-control{border: 1px solid #434f5c!important;background-color:#434f5c!important;color:#fff!important;}
 #topnav .navigation-menu > li > a {padding-top: 30px;padding-bottom: 30px;}
+#topnav .navigation-menu > li .submenu {top:85px!important;}
+
+#topnav .has-submenu a:hover, #topnav .has-submenu.active a i,#topnav .has-submenu.active a ,
+#topnav .has-submenu.active .submenu > li > a:hover ,
+#topnav .has-submenu.active .submenu > .active > a {color: #00d6b2!important;}
+#topnav .has-submenu.active .submenu > li > a {color: rgba(255, 255, 255, 0.7)!important} 
+
 #topnav .app-search a {color:#98a6ad!important;}
 .footer ul li {padding: 0!important;}
 

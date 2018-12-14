@@ -2,6 +2,7 @@ $(function() {
   indexList ()
   blockList ()
   tradingList ()
+
   $("#secLogo").mouseover(function(){
     $("#secLogoImg").attr("src","./images/secActive.png");
   });
@@ -14,6 +15,12 @@ $(function() {
   });
   $("#footerWeibo").mouseout(function(){
     $("#footerWeiboImg").attr("src","./images/weibo.png");
+  });
+  $("#submenuList").mouseover(function(){
+    $("#submenuFather").addClass("listHeaderActive")
+  });
+  $("#submenuList").mouseout(function(){
+    $("#submenuFather").addClass("listHeader");
   });
 })
 

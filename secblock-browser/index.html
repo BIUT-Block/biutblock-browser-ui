@@ -60,15 +60,17 @@
                     <!-- Navigation Menu-->
                     <ul class="navigation-menu clearfix">
                         <li class="has-submenu">
-                            <img src="./images/logo.png" alt="SEC - logo" class="headerLogo" width="20px" height="20px">
-                            <span class="headerTit">SEC Explorer</span>
+                            <a href="#">
+                                <img src="./images/logo.png" alt="SEC - logo" title="SEC" class="headerLogo" width="20px" height="20px">
+                                <span class="headerTit">SEC Explorer</span>
+                            </a>
                         </li>
                         <li class="has-submenu active">
                             <a href="index.html">Home</a>
                         </li>
                         <li class="has-submenu">
-                            <a href="./page/blockIndex.html">Block Chain</a>
-                            <ul class="submenu">
+                            <a href="./page/blockIndex.html" id="submenuFather">Block Chain</a>
+                            <ul class="submenu" id="submenuList">
                                 <li><a href="./page/blockIndex.html">区块</a></li>
                                 <li><a href="./page/trading.html">交易</a></li>
                                 <li><a href="./page/account.html">账户</a></li>
@@ -183,11 +185,11 @@
                     <div class="card-box">
                         <div class="indexList">
                             <h4 class="m-t-0 header-title">区块</h4>
-                            <a href="./pages/blockDetails.html">查看更多</a>
+                            <a href="./page/blockDetails.html">查看更多</a>
                         </div>
                         <div class="inbox-widget nicescroll mx-box" tabindex="5000">
                             <ul class="inbox-item">
-                                <a href="">
+                                <a href="./page/tradingDetails.html">
                                     <li class="itemList" style="margin-top:13px;padding-bottom: 13px;">
                                         <div class="inbox-item-text" style="display: flex;justify-content: space-between;font-weight: bold;">
                                             区块高度
@@ -215,11 +217,11 @@
                     <div class="card-box">
                         <div class="indexList">
                             <h4 class="m-t-0 header-title">交易</h4>
-                            <a href="./pages/trading.html">查看更多</a>
+                            <a href="./page/trading.html">查看更多</a>
                         </div>
                         <div class="inbox-widget nicescroll mx-box" tabindex="5000">
                             <ul class="inbox-item">
-                                <a href="">
+                                <a href="./page/tradingDetails.html">
                                     <li class="itemList" style="margin-top:13px;padding-bottom: 13px;">
                                         <div class="inbox-item-text" style="display: flex;justify-content: space-between;font-weight: bold;">
                                             交易哈希1

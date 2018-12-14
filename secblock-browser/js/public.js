@@ -12,4 +12,10 @@ $(function(){
   $("#footerWeibo").mouseout(function(){
     $("#footerWeiboImg").attr("src","../images/weibo.png");
   });
+  $("#submenuList").mouseover(function(){
+    $("#submenuFather").addClass("listHeaderActive")
+  });
+  $("#submenuList").mouseout(function(){
+    $("#submenuFather").addClass("listHeader");
+  });
 })
